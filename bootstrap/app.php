@@ -90,6 +90,9 @@ $app->singleton(
 | can respond to, as well as the controllers that may handle them.
 |
 */
+$app->middleware([
+    App\Http\Middleware\Cors::class
+ ]);
 
 $app->router->group([
     'namespace' => 'App\Http\Controllers',
